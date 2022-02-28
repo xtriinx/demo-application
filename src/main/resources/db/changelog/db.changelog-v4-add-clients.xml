@@ -1,0 +1,55 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="4" author="triin">
+        <insert tableName="client">
+            <column name="user_id" value="1"/>
+            <column name="firstname" value="Tiit"/>
+            <column name="lastname" value="Sibul"/>
+            <column name="username" value="tiitpoiss"/>
+            <column name="email" value="tiit.sibul@gmail.com"/>
+            <column name="address" value="sepa 1, tallinn"/>
+            <column name="country" value="Estonia"/>
+        </insert>
+        <insert tableName="client">
+            <column name="user_id" value="1"/>
+            <column name="firstname" value="Pekka"/>
+            <column name="lastname" value="Hämanen"/>
+            <column name="username" value="user99"/>
+            <column name="address" value="Rovaniemi 21"/>
+            <column name="country" value="Finland"/>
+        </insert>
+        <insert tableName="client">
+            <column name="user_id" value="1"/>
+            <column name="firstname" value="Mans"/>
+            <column name="lastname" value="Hermet"/>
+            <column name="username" value="mans34"/>
+            <column name="email" value="mans.heremt@gmail.com"/>
+            <column name="address" value="Stockholm"/>
+            <column name="country" value="Sweden"/>
+        </insert>
+        <insert tableName="client">
+            <column name="user_id" value="2"/>
+            <column name="firstname" value="Mati"/>
+            <column name="lastname" value="Nuude"/>
+            <column name="username" value="matinuude112"/>
+            <column name="address" value="oulu 4"/>
+            <column name="country" value="Finland"/>
+        </insert>
+        <insert tableName="client">
+            <column name="user_id" value="2"/>
+            <column name="firstname" value="Marju"/>
+            <column name="lastname" value="Kuut"/>
+            <column name="username" value="mkuut"/>
+            <column name="email" value="marju.kuut@gmail.com"/>
+            <column name="address" value="ahtri 4, tallinn"/>
+            <column name="country" value="Estonia"/>
+        </insert>
+        <rollback>
+            <delete tableName="client"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

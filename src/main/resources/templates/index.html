@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Client list</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+<div class="container">
+    <div class="float-right">
+        <p>Welcome, <span th:text="${user.username}" style="font-weight: bold">Username</span>!</p>
+        <a th:href="@{'/logout'}" class="btn btn-secondary float-right">Logout</a>
+    </div>
+
+    <div class="py-5 text-center">
+        <h2>Clients</h2>
+    </div>
+
+    <div class="row">
+        <a href="/new" class="btn btn-primary">Add client</a>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Username</th>
+                <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="client : ${listClient}">
+                <td th:text="${client.getId()}">ID</td>
+                <td th:text="${client.getFirstName()}">First Name</td>
+                <td th:text="${client.getLastName()}">Last Name</td>
+                <td th:text="${client.getUsername()}">Username</td>
+                <td>
+                    <a th:href="@{'/edit/' + ${client.getId()}}" class="btn btn-primary">Edit</a>
+                    <a th:href="@{'/delete/' + ${client.getId()}}" class="btn btn-primary">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+</body>
+</html>
+
+

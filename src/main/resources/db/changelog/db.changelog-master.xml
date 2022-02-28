@@ -1,0 +1,13 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <include file="db/changelog/db.changelog-v1-create-table-user.xml"/>
+    <include file="db/changelog/db.changelog-v2-create-table-client.xml"/>
+    <include file="db/changelog/db.changelog-v3-add-users.xml"/>
+    <include file="db/changelog/db.changelog-v4-add-clients.xml"/>
+    <include file="db/changelog/db.changelog-v5-create-table-country.xml"/>
+    <include file="db/changelog/db.changelog-v6-add-countries.xml"/>
+</databaseChangeLog>
