@@ -12,7 +12,22 @@
             <column name="countryname" value="Finland"/>
         </insert>
         <insert tableName="country">
+            <column name="countryname" value="Latvia"/>
+        </insert>
+        <insert tableName="country">
+            <column name="countryname" value="Lithuania"/>
+        </insert>
+        <insert tableName="country">
+            <column name="countryname" value="Poland"/>
+        </insert>
+        <insert tableName="country">
             <column name="countryname" value="Sweden"/>
+        </insert>
+        <insert tableName="country">
+            <column name="countryname" value="Switzerland"/>
+        </insert>
+        <insert tableName="country">
+            <column name="countryname" value="United Kingdom"/>
         </insert>
         <rollback>
             <delete tableName="country"/>
